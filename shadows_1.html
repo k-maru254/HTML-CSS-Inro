@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows</title>
+
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: publico;
+        }
+        #text-shadows{
+            width: 800px;
+            height: 600px;
+            background-color: rgb(195, 219, 219);
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #text-shadows h1{
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        #p1{
+            font-size: 30px;
+            color: rgb(240, 240, 240);
+            text-shadow: 0px 0px 5px rgb(126, 39, 39);
+        }
+
+        #p2{
+            font-size: 30px;
+            color: greenyellow;
+            text-shadow: 1px 0px 3px black, -1px 0px 3px black, 0px 1px 3px black,
+             0px -1px 3px black;
+        }
+        #p3{
+            font-size: 30px;
+            border: solid rgb(21, 20, 80) 1px;
+            color: rgb(21, 20, 80) 4px;
+            text-align: center;
+            width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: chartreuse;
+            user-select: none;
+            box-shadow: 5px 5px 5px rgba(182, 101, 101, 0.445), 
+            5px 5px 15px rgba(226, 129, 129, 0.445) inset;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="text-shadows">
+        <h1>Text shadow</h1>
+        <p id="p1">Sentence number 1</p>
+        <p id="p2">Sentence number 2</p>
+        <p id="p3">Sentence number 4</p>
+    </div>
+</body>
+</html>

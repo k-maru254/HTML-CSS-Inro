@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p{
+            color:coral
+        }
+
+        .div{
+            Width: 80vw;
+            height: 150px;
+            background: lightgrey;
+            border-radius: 10px;
+            margin: 10px auto;
+        }
+
+        #transition-1{
+            width: 200px;
+            height: 100px;
+            background: yellowgreen;
+            border: black solid 3px;
+            border-radius: 10px;
+            transition: width 2s ease, transform 2s ease, height 2s linear;
+        }
+
+        #transition-1:hover{
+            width: 80vw;
+            height: 130px;
+        }
+        #transition-2{
+            width: 100px;
+            height: 30px;  
+            background: black;      
+            margin: 0 auto;
+            border-radius: 10px;
+            color: aliceblue;
+            text-align: center;
+            line-height: 30px;
+            transition: line-height 0.2s ease, color 0.2s ease,
+                         height 0.2s ease, background 0.2s ease,
+                          font-size 0.2s ease, width 0.2s ease;
+        }
+
+        #transition-2:hover{
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            color: black;
+            background-color: aliceblue;
+            font-size: 1.2em;
+        }
+
+        #transition-3{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            line-height: 30px;
+            transition: transform 0.3s ease;
+
+        }
+
+        #transition-3:hover{
+            transform: rotate(-5deg);
+        }
+        #clean{
+            background: springgreen;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        #transition-4{
+            width: 150px;
+            height: 40px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            line-height: 40px;
+            text-align: center;
+            transition: transform 2s ease;
+        }
+
+        #transition-4:hover{
+            transform: translate(30px, 30px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div">
+        <p style="height: 20px; text-align: center;">Transition width and height</p>
+        <div id="transition-1"></div>
+    </div>
+    <div class="div">
+        <p style="height: 20px; text-align: center;">Text transition</p>
+        <div id="transition-2">Transition</div>
+    </div>
+    <div class="div">
+        <p style="height: 20px; text-align: center;">Rotation transition</p>
+        <div id="clean">
+            <div id="transition-3">A button</div>
+        </div>        
+    </div>
+    <div class="div">
+        <p style="height: 20px; text-align: center;">Transformatin in transition</p>
+        <div id="transition-4">Transition 4</div>
+    </div>
+</body>
+</html>

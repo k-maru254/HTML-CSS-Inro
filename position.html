@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #position-1{
+            background: lightgray;
+            width:600px;
+            height: 400px;
+            margin: 10px auto;
+            border: black solid 2px;
+            border-radius: 10px;
+        }
+
+        p{
+            padding: 10px;
+            color:rgb(24, 24, 66);
+        }
+
+        #relative{
+            width: 300px;
+            height: 150px;
+            border: solid black 2px;
+            border-radius: 7px;
+            position: relative;
+            top: 10px;
+            left: 20px;
+        }
+
+        #position-2{
+            background: grey;
+            width: 600px;
+            height: 400px;
+            border: solid black 2px;
+            border-radius: 10px;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        #absolute{
+            width: 300px;
+            height: 150px;
+            position:absolute;
+            top: 10px;
+            left: 30px;
+            border: solid black 2px;
+            border-radius: 10px;
+        }
+
+        #position-3{
+            width: 600px;
+            height: 103px;
+            background: darkgray;
+            border: solid black 2px;
+            border-radius: 10px;
+            margin: 10px auto;
+            position: sticky;
+            top: -20px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="position-3" >
+        <p >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Voluptates dolor earum quis expedita eveniet autem quidem
+              maiores asperiores quisquam? Et placeat sint delectus 
+              a commodi modi veniam minima nisi exercitationem incidunt
+              ! Est maxime, cum quaerat dolor accusantium adipisci quam q
+              ui? Quaerat incidunt autem vel, temporibus placeat vero error
+               perspiciatis sed!Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+               Voluptates dolor earum quis expedita eveniet autem quidem
+                maiores asperiores quisquam? Et placeat sint delectus 
+                a commodi modi veniam minima nisi exercitationem incidunt
+                ! Est maxime, cum quaerat dolor accusantium adipisci quam q
+                ui? Quaerat incidunt autem vel, temporibus placeat vero error
+                 perspiciatis sed!
+        </p>
+        <div id="sticky">
+            
+        </div>
+    </div>
+
+    <div id="position-1">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Quos doloremque excepturi recusandae cum ex, optio vitae
+              aut quidem nobis laudantium in qui consectetur consequatur
+               mollitia soluta eum natus, nesciunt corrupti sapiente 
+               quam itaque quaerat incidunt? Neque ullam aut totam
+                natus aliquid quas facilis, placeat perspiciatis? 
+                Sapiente rem sint veritatis sequi!
+        </p>
+        <div id="relative">
+            <p>This is a relative container, it moves along with any new content added to it.
+                It is flexible and can contain other objects.
+            </p>
+        </div>
+    </div>
+
+    <div id="position-2">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Voluptates dolor earum quis expedita eveniet autem quidem
+              maiores asperiores quisquam? Et placeat sint delectus 
+              a commodi modi veniam minima nisi exercitationem incidunt
+              ! Est maxime, cum quaerat dolor accusantium adipisci quam q
+              ui? Quaerat incidunt autem vel, temporibus placeat vero error
+               perspiciatis sed!
+        </p>
+        <div id="absolute">
+            <p text-overflow: ellipsis;>This is an absolute container. This container is selfish, mean and inconsiderate at the same  time.
+                It does not consider the position of his siblings or elders, just does what is best to it
+            </p> 
+        </div>
+    </div>
+</body>
+</html>

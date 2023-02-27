@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit and position</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #object-fit{
+            width: 100vw;
+            height: 50vh;
+            background: lightgreen;
+            text-align: center;
+        }
+
+        #object-fit img{
+            width: 25%;
+            height: 80%;
+            border-radius: 10px;
+            margin-top: 15px;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="object-fit">
+        <img src="Images/image_2.jpg" alt="Image 1">
+        <img src="Images/image_3.jpg" alt="Image 2">
+        <img src="Images/image_4.jpg" alt="Image 3">
+    </div>
+</body>
+</html>
