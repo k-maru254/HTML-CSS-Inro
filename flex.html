@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flex</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        body{
+            scrollbar-color: rgb(29, 230, 39) rgb(8, 9, 73);
+        }
+
+        .flex-body{
+            width: calc(100% - 10px);
+            background: rgb(228, 231, 221);
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 16px;
+            display: flex;
+            flex-flow: column nowrap;
+            min-width: 300px;
+        }
+
+        #header-flex{
+            margin-top: 0;
+            border-radius: 0 0 16px 16px;
+            position: sticky;
+            top: 0px;
+        }
+
+        #flex-container-1{
+            background: rgb(245, 242, 242);
+            border-radius: 8px;
+            padding: 2px;
+            display: flex;
+            align-items: stretch;
+        }
+
+        .flex-box-1{
+            background:rgb(195, 197, 191);
+            border-radius: 4px;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .flex-box-1 > h3{
+            text-align: center;
+        }
+
+        .flex-box-1 > p{
+            height: calc(100% - 22px);
+            text-align: justify;
+            background: rgb(235, 247, 211);
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        #ww{
+            display: flex;
+            justify-content: right;
+        }
+
+        #flex-container-2{
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            flex-direction: row;
+            justify-content: right;
+            flex-basis: 257px;
+            transition: flex-basis 0.5s ease;
+        }
+
+        #flex-container-2 > p{
+            color:rgb(29, 230, 39);
+            font-family:'Courier New', Courier, monospace;
+            margin: 4px;
+            background: rgb(8, 9, 73);
+            border-radius: 4px;
+            padding: 10px;
+            flex-basis: 10px;
+            flex-grow: 2;
+            text-align: center;
+            flex: 0 1 80px;
+            transition: flex-basis 0.5s ease;
+        }
+
+        #flex-container-3{
+            display: flex;
+        }
+
+        #logo-search{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+            height: 36px;
+            margin: 3px;
+        }
+
+        #logo{
+            height: 100%;
+            flex: 0 0 40px;
+            line-height: 32px;
+            background: lightblue;
+            text-align: center
+        }
+
+        #search{
+            display: flex;
+            height: 100%;
+            flex: 1 0 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #content-search{
+            width: 80%;
+            display:flex;
+            height: 100%;
+        }
+
+        #content-search > input{
+            flex-grow: 1;
+            border-radius: 5px 0 0 5px;
+            border: solid rgb(8, 9, 73);
+            border-width: 2px 0 2px 2px;
+            outline: none;
+            width: 30px;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+
+        #content-search > button{
+            border-radius: 0 5px 5px 0;
+            box-shadow: none;
+            border: solid rgb(8, 9, 73) 2px;
+            user-select: none;
+        }
+
+        #content-search > button:focus{
+            outline: none;
+        }
+
+        #navs{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            margin: 3px;
+        }
+
+        #navs > div{
+            width: 80px;
+            height: 100%;
+            border:solid rgb(8, 9, 73) 2px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 0 3px;
+            line-height: 36px;
+            background:rgb(29, 230, 39);
+            color:rgb(8, 9, 73);
+            user-select: none;
+        }   
+
+        @media only screen and (max-width: 962px){
+            #flex-container-1{
+                flex-flow: column nowrap;
+            }
+
+            #flex-container-2{
+                flex-basis: 100%;
+            }
+
+            #flex-container-2 > p{
+                flex-basis: 400px;
+            }
+
+            #flex-container-3{
+                flex-direction: column;
+            }
+            
+            #navs > div{
+                flex: 1 1 auto;
+            }            
+
+            #search{
+                justify-content: right;
+            }     
+
+            #navs > div:last-child{
+                margin-right: 0;
+            }
+
+            #navs > div:first-child{
+                margin-left: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-body" id="header-flex">
+        <div id="flex-container-3">
+            <div id="logo-search">
+                <div id="logo">Logo</div>
+                <div id="search">
+                    <form action="#" id="content-search"  method="get">
+                        <input type="search" name="searcher" id="searcher" placeholder="Search ">
+                        <button type="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div id="navs">
+                <div id="nav-1">Nav 1</div>
+                <div id="nav-2">Nav 2</div>
+                <div id="nav-3">Nav 3</div>
+                <div id="nav-3">Nav 4</div>
+                <div id="nav-3">Nav 5</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-body" >
+        <h2>This is flex number 1</h2>
+        <div id="flex-container-1">
+            <div class="flex-box-1">
+                <h3>Content 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                    dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Sequi eaque
+                        culpa hic magnam provident, totam, earum nesciunt quisquam
+                        quaerat ullam asperiores fuga, voluptatibus repellat
+                        voluptatem in facere libero? Voluptate, dicta.</p>
+            </div>
+            <div class="flex-box-1">
+                <h3>Content 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                    dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Sequi eaque
+                        culpa hic magnam provident, totam, earum nesciunt quisquam
+                        quaerat ullam asperiores fuga, voluptatibus repellat
+                        voluptatem in facere libero? Voluptate, dicta.</p>
+            </div>
+            <div class="flex-box-1">
+                <h3>Content 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                    tenetur inventore molestias, nulla veritatis.Lorem ipsum 
+                    dolor sit amet consectetur adipisicing elit.
+                    Quo explicabo sint repellat! Reprehenderit quibusdam quos
+                        tenetur inventore molestias, nulla veritatis Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Sequi eaque
+                        culpa hic magnam provident, totam, earum nesciunt quisquam
+                        quaerat ullam asperiores fuga, voluptatibus repellat
+                            voluptatem in facere libero? Voluptate, dicta.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex-body">
+    <h2>This is flex number 2</h2>
+    <div id="ww">
+        <div id="flex-container-2">
+            <p>Flex 1</p>
+            <p>Flex 2</p>
+            <p>Flex 3</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
